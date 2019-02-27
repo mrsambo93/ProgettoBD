@@ -1,6 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.mllib.stat import Statistics
 import pandas as pd
+import time
 
 
 # How long videos trend in countries
@@ -8,11 +9,16 @@ class Job6:
 
     PATH = "./youtube-new/"
     OUTPUT_FOLDER = './output/job6/'
+    start = 0
+    end = 0
 
     def __init__(self):
 
         spark = SparkSession.builder.master('local').appName('progettoBD').getOrCreate()
+        self.start = time.time()
         self.load_data(spark)
+        self.end = time.time()
+        print('Time ' + str(self.end - self.start))
 
     def load_data(self, spark):
 

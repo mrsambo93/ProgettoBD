@@ -2,6 +2,7 @@ from pyspark.sql import SparkSession
 import pyspark.sql.functions as sf
 import pyspark.sql.types as t
 import json
+import time
 
 
 # Best categories by country
@@ -10,13 +11,19 @@ class Job2:
     PATH = "./youtube-new/"
     OUTPUT_FOLDER = './output/job2/'
     COUNTRIES = ["CA", "DE", "FR", "GB", "US"]
+    start = 0
+    end = 0
 
     def __init__(self):
 
         spark = SparkSession.builder.master('local').appName('progettoBD').getOrCreate()
 
         for country in self.COUNTRIES:
+            self.start = time.time()
             self.load_data(spark, country)
+            if country == "US":
+                self.end = time.time()
+                print('Time ' + str(self.end - self.start))
 
     def load_data(self, spark, country):
         full = spark.read.format('csv')\
