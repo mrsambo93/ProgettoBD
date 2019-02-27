@@ -4,7 +4,7 @@ import pandas as pd
 import time
 
 
-# How long videos trend in countries
+# Correlation between views, likes, dislikes and comments
 class Job6:
 
     PATH = "./youtube-new/"

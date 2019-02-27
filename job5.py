@@ -2,7 +2,8 @@ from pyspark.sql import SparkSession
 import pyspark.sql.functions as sf
 import time
 
-# How long videos trend in countries
+
+# Best channels by country
 class Job5:
 
     PATH = "./youtube-new/"
