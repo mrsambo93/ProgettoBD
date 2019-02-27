@@ -1,0 +1,17 @@
+JOB1
+View:Run time: 0.42 seconds, Data scanned: 0 KB
+Run time: 3.8 seconds, Data scanned: 62.84 MB
+
+JOB2
+Run time: 3.63 seconds, Data scanned: 62.84 MB
+
+JOB3
+Run time: 3.88 seconds, Data scanned: 62.84 MB
+
+JOB4
+Day:Run time: 3.54 seconds, Data scanned: 62.84 MB
+Hour:Run time: 3.46 seconds
+Cobined:Run time: 3.92 seconds
+
+JOB5
+Run time: 2.26 seconds, Data scanned: 62.84 MB
